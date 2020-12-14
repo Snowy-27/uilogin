@@ -132,10 +132,41 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(25),
-              child: Text('pas de compte en, creer',
-                  style: TextStyle(color: Colors.white)),
+            Column(
+              children: [
+                Container(
+                  padding: EdgeInsets.all(25),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'pas de compte en, ',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'creer',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                RaisedButton(
+                  child: Text('Creer un compte'),
+                  onPressed: () {
+                    print('clicked');
+                  },
+                  color: Color.fromRGBO(30, 28, 36, 1),
+                  textColor: Colors.white,
+                )
+              ],
+            ),
+            SizedBox(
+              height: 4,
             )
           ],
         ));
